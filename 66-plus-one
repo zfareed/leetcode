@@ -1,0 +1,15 @@
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+var plusOne = function(digits) {
+    let number = digits.join('');
+        //we are using BigInt for bigger numbers as parseInt can't be used for integers bigger then 2^32
+    number = BigInt(number) + BigInt(1)
+    number = number.toString()
+    let list = number.split('')
+    return list
+    
+};
+
+console.log(plusOne([6,1,4]));
